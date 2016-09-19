@@ -12,7 +12,7 @@ save:
 	docker rm $(CONTAINER)
 
 new:
-	docker run --name kuapp -p 3000:3000 -v $(PWD):/kuapp -it kuapp:latest bash # build/dev/start.sh
+	docker run --name kuapp -p 3000:3000 -v $(PWD):/kuapp -it kuapp:latest docker/start.sh
 
 run:
 	docker start -i $(CONTAINER)
